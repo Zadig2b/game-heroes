@@ -1,0 +1,51 @@
+body {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+#heroes-container {
+  display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+flex-wrap: wrap;
+}
+
+#heroes-container img {
+  transition: transform 0.3s ease, filter 0.3s ease;
+  border-radius: 10px;
+
+}
+
+#heroes-container img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.2);
+}
+
+#powers-container {
+  position: fixed;
+  bottom: 50px;
+  display: flex; 
+  gap: 10px; 
+  margin-top: 20px;
+  flex-wrap: wrap;
+
+}
+/* Icônes des pouvoirs */
+#powers-container img {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 10px;
+}
+
+#powers-container img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.5);
+}
+
+/* Infobulle */
+#powers-container img[title] {
+  position: relative;
+  cursor: help;
+}
