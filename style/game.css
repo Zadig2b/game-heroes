@@ -1,0 +1,23 @@
+body {
+    margin: 0;
+    background: #0d1117;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+  }
+  
+  #game-container {
+    padding: 40px;
+  }
+  
+  #playground {
+    width: 80%;
+    height: 500px;
+    margin: 20px auto;
+    background: linear-gradient(145deg, #1e222b, #11161e);
+    border: 2px solid #00ffff55;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+    position: relative;
+  }
+  

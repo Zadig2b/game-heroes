@@ -1,0 +1,80 @@
+body {
+  background: #0d1117;
+  color: white;
+  font-family: 'Arial', sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+#heroes-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+#heroes-container img {
+  width: 150px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+#heroes-container img:hover {
+  transform: scale(1.05);
+}
+
+#hero-details {
+  margin: 20px auto;
+  max-width: 600px;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+}
+
+#powers-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+#powers-container .power {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  font-size: 14px;
+  text-align: center;
+}
+
+#powers-container .power img {
+  width: 80px;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+  cursor: pointer;
+}
+
+#powers-container .power img:hover {
+  transform: scale(1.1);
+}
+
+#start-game {
+  margin-top: 30px;
+  padding: 12px 24px;
+  font-size: 18px;
+  background: #00ffff;
+  color: #000;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+#start-game:hover {
+  background: #00cccc;
+}
