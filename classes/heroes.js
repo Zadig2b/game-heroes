@@ -8,6 +8,7 @@ export class Hero {
       this.pouvoirs = pouvoirs;
       this.personnalite = personnalite;
       this.origine = origine;
+      this.life = 100;
     }
   
     presentation() {
@@ -19,5 +20,11 @@ export class Hero {
         ? `Pouvoir activé : ${this.pouvoirs[nomPouvoir]}`
         : `Pouvoir "${nomPouvoir}" inconnu pour ce héros.`;
     }
+
+    frapper(cible) {
+      cible.life -= this.force;
+      console.log(`${this.alias} frappe ${cible.alias}`);
+    }
+    
   }
   
