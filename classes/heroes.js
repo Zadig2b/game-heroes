@@ -80,7 +80,7 @@ export class Hero {
           }
           case 'boostDefense': {
             this.buffs.push({ stat: 'defense', value: this.defense, duration });
-            const nouvelleDefense = Math.floor(this.baseDefense * (1 + sort.value / 100));
+            const nouvelleDefense = this.baseDefense + sort.value;
             this.defense = nouvelleDefense;
             effet = `${this.alias} augmente sa défense à ${nouvelleDefense} (${sort.value}%) pour ${duration} tours.`;
             break;
@@ -132,7 +132,7 @@ export class Hero {
     this.sorts.forEach(s => s.reduireCooldown());
     this.buffs = this.buffs.filter(buff => {
       buff.duration--;
-      if (buff.duration <= 0) {
+      if (1 + buff.duration <= 0) {
         switch (buff.stat) {
           case 'force':
             this.force = this.baseForce;
@@ -148,16 +148,6 @@ export class Hero {
       }
       return true;
     });
-  }
-
-  getStats() {
-    return {
-      force: this.force,
-      defense: this.defense,
-      agilite: this.agilite,
-      pv: this.pv,
-      bouclier: this.bouclier,
-    };
   }
   
 }

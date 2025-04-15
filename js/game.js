@@ -87,9 +87,8 @@ function afficherInfos(index) {
       showToast(feedback);
       updatePVBar(index === 0 ? 1 : 0, cible.pv);
       flashHit(index === 0 ? 1 : 0);
-      joueur.sorts.forEach((s) => s.reduireCooldown());
       changerTour();
-    }
+    },
   });
 
   zone.innerHTML = "";
@@ -97,14 +96,19 @@ function afficherInfos(index) {
   zone.appendChild(powersContainer);
 }
 
-
 function changerTour() {
+  // Réduire les cooldowns et effets du joueur qui a fini son tour
+  const joueurActuel = currentPlayerIndex === 0 ? joueur1 : joueur2;
+  joueurActuel.reduireCooldowns();
+
   currentPlayerIndex = 1 - currentPlayerIndex;
+
   afficherInfos(0);
   afficherInfos(1);
   updatePVBar(0, joueur1.pv);
   updatePVBar(1, joueur2.pv);
 }
+
 
 function updatePVBar(index, pv) {
   const zone = zones[index];
@@ -130,5 +134,4 @@ function showToast(message) {
   }
 
   toast.textContent = message;
-
 }

@@ -133,10 +133,10 @@
         "nom": "responsiveAura",
         "type": "bonus",
         "cooldown": 3,
-        "description": "triple la force pendant 3 tours",
+        "description": "triple la force pendant 2 tours",
         "effect": "boostForce",
         "value": 300,
-        "duration":3
+        "duration":2
       },
       {
         "nom": "grilleMagique",
@@ -189,7 +189,7 @@
         "nom": "manipulationTemps",
         "type": "bonus",
         "cooldown": 3,
-        "description": "Ralenti le temps, augmente la défense à 80 pendant 2 tours.",
+        "description": "Ralenti le temps, augmente la défense de 80 pendant 2 tours.",
         "effect": "boostDefense",
         "value": 80,
         "duration":2
@@ -199,9 +199,9 @@
         "nom": "hacking",
         "type": "malus",
         "cooldown": 2,
-        "description": "Défense de l'adversaire réduite de 50 jusqu'au prochain tour",
+        "description": "Défense de l'adversaire réduite jusqu'au prochain tour",
         "effect": "reduceDefense",
-        "value": 50,
+        "value":-40,
         "duration":1
 
       },
@@ -265,7 +265,7 @@
         "nom": "controlerCode",
         "type": "malus",
         "cooldown": 3,
-        "description": "Implante un script qui réduit la force de l’adversaire de 40 pendant 2 tours.",
+        "description": "Implante un script qui réduit la force de l’adversaire pendant 2 tours.",
         "effect": "reduceForce",
         "value": 0
       },
@@ -285,7 +285,7 @@
         "cooldown": 2,
         "description": "Hypnotise : l’adversaire perd toute agilité pour 1 tour.",
         "effect": "reduceAgilite",
-        "value": 50,
+        "value": 0,
         "duration":1
 
       },
