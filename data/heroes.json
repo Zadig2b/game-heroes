@@ -47,9 +47,9 @@
         "nom": "lectureCode",
         "type": "bonus",
         "cooldown": 3,
-        "description": "Détecte les faiblesses ennemies, augmente la force de 100% pour 2 tours.",
+        "description": "Détecte les faiblesses ennemies, doublant sa force pour 2 tours.",
         "effect": "boostForce",
-        "value": 100,
+        "value": 200,
         "duration":2
 
       },
@@ -57,7 +57,7 @@
         "nom": "teleportation",
         "type": "bonus",
         "cooldown": 2,
-        "description": "Évite automatiquement la prochaine attaque.",
+        "description": "Évite à coup sûr la prochaine attaque: 100 agilité pour 1 tour",
         "effect": "boostAgilite",
         "value": 100,
         "duration":1
@@ -275,7 +275,7 @@
         "cooldown": 3,
         "description": "Devient un serpent géant : force x2 pendant 2 tours.",
         "effect": "boostForce",
-        "value": 50,
+        "value": 200,
         "duration":2
 
       },
@@ -283,10 +283,10 @@
         "nom": "hypnoseSyntaxique",
         "type": "malus",
         "cooldown": 2,
-        "description": "Hypnotise : l’adversaire perd toute agilité pour 1 tour.",
+        "description": "Hypnotise : l’adversaire perd toute agilité pour 2 tour.",
         "effect": "reduceAgilite",
         "value": 0,
-        "duration":1
+        "duration":2
 
       },
       {

@@ -5,6 +5,7 @@ const titre = document.getElementById('titre');
 const powersContainer = document.getElementById('powers-container');
 const heroDetails = document.getElementById('hero-details');
 const startGameButton = document.getElementById('start-game');
+startGameButton.textContent = "Choisir un héros";
 
 let selectedHeroes = [];
 let currentStep = 0;

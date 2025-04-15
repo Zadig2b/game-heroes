@@ -87,6 +87,12 @@ function afficherInfos(index) {
       showToast(feedback);
       updatePVBar(index === 0 ? 1 : 0, cible.pv);
       flashHit(index === 0 ? 1 : 0);
+
+      if (cible.pv <= 0) {
+        finDuJeu(joueur, cible);
+        return;
+      }
+
       changerTour();
     },
   });
@@ -108,7 +114,6 @@ function changerTour() {
   updatePVBar(0, joueur1.pv);
   updatePVBar(1, joueur2.pv);
 }
-
 
 function updatePVBar(index, pv) {
   const zone = zones[index];
@@ -134,4 +139,27 @@ function showToast(message) {
   }
 
   toast.textContent = message;
+}
+
+function finDuJeu(gagnant, perdant) {
+  // Empêche toute autre interaction
+  document
+    .querySelectorAll(".powers-container")
+    .forEach((c) => (c.innerHTML = ""));
+
+  const message = document.createElement("div");
+  message.className = "game-over";
+  message.innerHTML = `
+    <h2>💥 ${perdant.alias} est K.O. !</h2>
+    <h1>🎉 ${gagnant.alias} remporte la victoire !</h1>
+    <button id="restart-btn">Recommencer</button>
+  `;
+  message.style.textAlign = "center";
+  message.style.padding = "20px";
+
+  playground.appendChild(message);
+
+  document.getElementById("restart-btn").addEventListener("click", () => {
+    window.location.href = "index.html";
+  });
 }

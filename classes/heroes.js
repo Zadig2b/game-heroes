@@ -73,7 +73,7 @@ export class Hero {
             break;
           case 'boostForce': {
             this.buffs.push({ stat: 'force', value: this.force, duration });
-            const nouvelleForce = Math.floor(this.baseForce * (sort.value / 100));
+            const nouvelleForce = Math.floor(this.force * (sort.value / 100));
             this.force = nouvelleForce;
             effet = `${this.alias} multiplie sa force à ${nouvelleForce} (${sort.value}%) pour ${duration} tours.`;
             break;
