@@ -78,3 +78,18 @@ body {
 #start-game:hover {
   background: #00cccc;
 }
+
+.hero-card {
+  border: 2px solid transparent;
+  border-radius: 10px;
+  transition: border 0.2s ease, transform 0.2s ease;
+}
+
+.hero-card:hover {
+  border: 2px solid #00ffff55;
+  transform: scale(1.05);
+}
+
+.selected-hero {
+  border: 2px solid #00ffff !important;
+}
