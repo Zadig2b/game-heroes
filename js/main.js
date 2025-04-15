@@ -1,7 +1,4 @@
-
-// main.js
-import { Hero } from '../classes/heroes.js';
-import { renderPower } from '../components/powerCard.js';
+import { renderAllPowers } from '../components/powerCard.js';
 
 const heroesContainer = document.getElementById('heroes-container');
 const titre = document.getElementById('titre');
@@ -41,10 +38,8 @@ fetch('./data/heroes.json')
           <ul>${heroData.personnalite.valeurs.map(v => `<li>${v}</li>`).join('')}</ul>
         `;
 
-        powersContainer.innerHTML = '';
-        Object.entries(heroData.pouvoirs).forEach(([nom, description]) => {
-          powersContainer.appendChild(renderPower(alias, nom, description));
-        });
+        renderAllPowers(powersContainer, alias, heroData.pouvoirs);
+
 
         currentStep++;
 

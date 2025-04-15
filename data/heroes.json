@@ -47,15 +47,21 @@
         "nom": "lectureCode",
         "type": "bonus",
         "cooldown": 3,
-        "description": "Détecte les faiblesses ennemies, augmente la force de 50% pour 2 tours.",
-        "sideEffect": "boostForce"
+        "description": "Détecte les faiblesses ennemies, augmente la force de 100% pour 2 tours.",
+        "effect": "boostForce",
+        "value": 100,
+        "duration":2
+
       },
       {
         "nom": "teleportation",
         "type": "bonus",
         "cooldown": 2,
         "description": "Évite automatiquement la prochaine attaque.",
-        "sideEffect": "boostAgilite"
+        "effect": "boostAgilite",
+        "value": 100,
+        "duration":1
+
       },
       {
         "nom": "protection",
@@ -108,26 +114,35 @@
         "type": "malus",
         "cooldown": 3,
         "description": "L’adversaire se transforme en élément sticky : il ne peut pas éviter les 2 prochaines attaques.",
-        "sideEffect": "zeroAgilite"
+        "effect": "reduceAgilite",
+        "value": 0,
+        "duration":2
+
       },
       {
         "nom": "camouflage",
         "type": "bonus",
         "cooldown": 2,
         "description": "Rend intouchable pendant 1 tour.",
-        "sideEffect": "boostAgilite"
+        "effect": "boostAgilite",
+        "value": 100,
+        "duration":1
+
       },
       {
         "nom": "responsiveAura",
         "type": "bonus",
         "cooldown": 3,
-        "description": "50% de chance d’éviter les attaques pendant 3 tours."
+        "description": "triple la force pendant 3 tours",
+        "effect": "boostForce",
+        "value": 300,
+        "duration":3
       },
       {
         "nom": "grilleMagique",
         "type": "attaque",
         "cooldown": 2,
-        "description": "Inflige 40 dégâts. Inflige +50% si l’ennemi est affecté par styleDom.",
+        "description": "Inflige 40 dégâts. Inflige le double si l’ennemi est affecté par styleDom.",
         "value": 40,
         "sideEffect": "bonusDegatsStyleDom"
       }
@@ -174,22 +189,31 @@
         "nom": "manipulationTemps",
         "type": "bonus",
         "cooldown": 3,
-        "description": "Ralenti le temps, augmente la défense de 100 pendant 2 tours.",
-        "sideEffect": "boostDefense"
+        "description": "Ralenti le temps, augmente la défense à 80 pendant 2 tours.",
+        "effect": "boostDefense",
+        "value": 80,
+        "duration":2
+
       },
       {
         "nom": "hacking",
         "type": "malus",
         "cooldown": 2,
-        "description": "Désactive la défense de l’adversaire pendant 1 tour.",
-        "sideEffect": "zeroDefense"
+        "description": "Défense de l'adversaire réduite de 50 jusqu'au prochain tour",
+        "effect": "reduceDefense",
+        "value": 50,
+        "duration":1
+
       },
       {
         "nom": "ombreTryCatch",
         "type": "bonus",
         "cooldown": 2,
-        "description": "Permet d’esquiver une attaque automatiquement.",
-        "sideEffect": "boostAgilite"
+        "description": "100 agilité jusqu'au prochain tour",
+        "effect": "boostAgilite",
+        "value": 100,
+        "duration":1
+
       },
       {
         "nom": "réplication",
@@ -241,22 +265,29 @@
         "nom": "controlerCode",
         "type": "malus",
         "cooldown": 3,
-        "description": "Implante un script qui réduit la force de l’adversaire de 100 pendant 2 tours.",
-        "sideEffect": "zeroForce"
+        "description": "Implante un script qui réduit la force de l’adversaire de 40 pendant 2 tours.",
+        "effect": "reduceForce",
+        "value": 0
       },
       {
         "nom": "mutationSerpent",
         "type": "bonus",
         "cooldown": 3,
         "description": "Devient un serpent géant : force x2 pendant 2 tours.",
-        "sideEffect": "boostForce"
+        "effect": "boostForce",
+        "value": 50,
+        "duration":2
+
       },
       {
         "nom": "hypnoseSyntaxique",
         "type": "malus",
         "cooldown": 2,
         "description": "Hypnotise : l’adversaire perd toute agilité pour 1 tour.",
-        "sideEffect": "zeroAgilite"
+        "effect": "reduceAgilite",
+        "value": 50,
+        "duration":1
+
       },
       {
         "nom": "veninLogique",

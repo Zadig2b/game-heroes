@@ -32,7 +32,7 @@ augmente les dégats des attaques d'un certain pourcentage: 0 force = 0% d'augme
 
 # défense:
 
-permet de bloquer les attaques (valeur de 0 à 100 correspondant aux chances de bloquer une attaque adverse)
+permet de réduire l'impact des attaques reçues: taux de réduction. à 100%, aucun dégat reçu. ex: si attaque.value = 50 et ma défense est 50 je reçois 25 dégats
 
 #### les sorts prennent plusieurs propriétés (cooldown, type): communes à tous les sorts
 

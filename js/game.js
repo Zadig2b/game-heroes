@@ -1,6 +1,6 @@
 // game.js
 import { Hero } from "../classes/heroes.js";
-import { renderPower } from "../components/powerCard.js";
+import { renderPower, renderSpells } from "../components/powerCard.js";
 
 const playground = document.getElementById("playground");
 const heroZone = document.getElementById("hero-zone");
@@ -56,45 +56,47 @@ function afficherInfos(index) {
     <img src="assets/heroes/${joueur.alias}/${joueur.alias}.webp" alt="${joueur.alias}" style="width:150px;border-radius:10px;" />
     <p>${joueur.origine}</p>
     <p><strong>PV:</strong> <span class="pv-value">${joueur.pv}</span></p>
+
+<div class="stat-item">
+  🌀 <strong>Agilité:</strong> ${joueur.agilite}
+  <span class="tooltip">Chances d'éviter les attaques (%)</span>
+</div>
+<div class="stat-item">
+  💪 <strong>Force:</strong> ${joueur.force}
+  <span class="tooltip">Augmente les dégâts des sorts (%)</span>
+</div>
+<div class="stat-item">
+  🛡️ <strong>Défense:</strong> ${joueur.defense}
+  <span class="tooltip">Réduction de dégâts (%)</span>
+</div>
+
   `;
 
   const powersContainer = document.createElement("div");
   powersContainer.id = "powers-container";
   powersContainer.classList.add("powers-container");
 
-  joueur.sorts.forEach((sort) => {
-    const disabled = !(index === currentPlayerIndex && sort.estDisponible());
-    const powerElement = renderPower(joueur.alias, sort.nom, sort.description);
-
-    if (!disabled) {
-      powerElement.addEventListener("click", () => {
-        const cible = index === 0 ? joueur2 : joueur1;
-        const feedback = joueur.lancerSort(sort.nom, cible);
-        showToast(feedback);
-        updatePVBar(index === 0 ? 1 : 0, cible.pv);
-        flashHit(index === 0 ? 1 : 0);
-        joueur.sorts.forEach((s) => s.reduireCooldown());
-        changerTour();
-      });
-    } else {
-      powerElement.style.opacity = "0.5";
-      powerElement.style.cursor = "not-allowed";
-
-      // Affichage cooldown restant si non dispo
-      const cdLabel = document.createElement("span");
-      cdLabel.textContent = sort.cooldownRestant;
-      cdLabel.classList.add("cooldown-label");
-      powerElement.style.position = "relative";
-      powerElement.appendChild(cdLabel);
+  renderSpells({
+    container: powersContainer,
+    joueur,
+    cible: index === 0 ? joueur2 : joueur1,
+    isActivePlayer: index === currentPlayerIndex,
+    onSpellCast: (sort) => {
+      const cible = index === 0 ? joueur2 : joueur1;
+      const feedback = joueur.lancerSort(sort.nom, cible);
+      showToast(feedback);
+      updatePVBar(index === 0 ? 1 : 0, cible.pv);
+      flashHit(index === 0 ? 1 : 0);
+      joueur.sorts.forEach((s) => s.reduireCooldown());
+      changerTour();
     }
-
-    powersContainer.appendChild(powerElement);
   });
 
   zone.innerHTML = "";
   zone.appendChild(wrapper);
   zone.appendChild(powersContainer);
 }
+
 
 function changerTour() {
   currentPlayerIndex = 1 - currentPlayerIndex;
@@ -124,17 +126,6 @@ function showToast(message) {
   if (!toast) {
     toast = document.createElement("div");
     toast.id = "toast-message";
-    toast.style.position = "fixed";
-    toast.style.top = "20px";
-    toast.style.left = "50%";
-    toast.style.transform = "translateX(-50%)";
-    toast.style.background = "#00ffff";
-    toast.style.color = "#000";
-    toast.style.padding = "12px 20px";
-    toast.style.borderRadius = "10px";
-    toast.style.fontWeight = "bold";
-    toast.style.zIndex = 9999;
-    toast.style.boxShadow = "0 0 10px rgba(0,255,255,0.5)";
     document.body.appendChild(toast);
   }
 
