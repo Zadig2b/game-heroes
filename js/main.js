@@ -1,4 +1,7 @@
+
+// main.js
 import { Hero } from '../classes/heroes.js';
+import { renderPower } from '../components/powerCard.js';
 
 const heroesContainer = document.getElementById('heroes-container');
 const titre = document.getElementById('titre');
@@ -6,11 +9,12 @@ const powersContainer = document.getElementById('powers-container');
 const heroDetails = document.getElementById('hero-details');
 const startGameButton = document.getElementById('start-game');
 
-let currentHero = null;
+let selectedHeroes = [];
+let currentStep = 0;
+const playerLabels = ["Joueur 1", "Joueur 2"];
 
-// Sauvegarde temporaire
-function saveHeroToLocalStorage(heroData) {
-  localStorage.setItem('selectedHero', JSON.stringify(heroData));
+function saveHeroesToLocalStorage() {
+  localStorage.setItem('selectedHeroes', JSON.stringify(selectedHeroes));
 }
 
 fetch('./data/heroes.json')
@@ -23,58 +27,40 @@ fetch('./data/heroes.json')
       heroImg.alt = alias;
 
       heroImg.addEventListener('click', () => {
-        currentHero = new Hero(
-          heroData.nom,
-          heroData.alias,
-          heroData.apparence,
-          heroData.pouvoirs,
-          heroData.personnalite,
-          heroData.origine
-        );
+        if (selectedHeroes.some(h => h.alias === heroData.alias)) return;
 
-        // Affiche titre
-        titre.textContent = currentHero.presentation();
+        selectedHeroes.push(heroData);
+        titre.textContent = `${playerLabels[currentStep]} a choisi ${heroData.alias}`;
 
-        // Active bouton
-        startGameButton.disabled = false;
-
-        // Affiche détails
         heroDetails.innerHTML = `
           <h3>Origine</h3>
-          <p>${currentHero.origine}</p>
+          <p>${heroData.origine}</p>
           <h3>Personnalité</h3>
-          <p>${currentHero.personnalite.attitude}</p>
+          <p>${heroData.personnalite.attitude}</p>
           <h3>Valeurs</h3>
-          <ul>${currentHero.personnalite.valeurs.map(v => `<li>${v}</li>`).join('')}</ul>
+          <ul>${heroData.personnalite.valeurs.map(v => `<li>${v}</li>`).join('')}</ul>
         `;
 
-        // Affiche pouvoirs
         powersContainer.innerHTML = '';
-        Object.entries(currentHero.pouvoirs).forEach(([nom, description]) => {
-          const wrapper = document.createElement('div');
-          wrapper.classList.add('power');
-
-          const label = document.createElement('div');
-          label.textContent = nom;
-
-          const img = document.createElement('img');
-          img.src = `assets/heroes/${alias}/power/${nom}.webp`;
-          img.title = description;
-
-          wrapper.appendChild(label);
-          wrapper.appendChild(img);
-          powersContainer.appendChild(wrapper);
+        Object.entries(heroData.pouvoirs).forEach(([nom, description]) => {
+          powersContainer.appendChild(renderPower(alias, nom, description));
         });
 
-        // Sauvegarde en localStorage
-        saveHeroToLocalStorage(heroData);
+        currentStep++;
+
+        if (currentStep >= 2) {
+          startGameButton.disabled = false;
+          titre.textContent = `Les deux joueurs ont choisi leurs héros.`;
+          saveHeroesToLocalStorage();
+        } else {
+          titre.textContent = `Joueur 2 : choisissez votre héros`;
+        }
       });
 
       heroesContainer.appendChild(heroImg);
     });
   });
 
-// Redirection au clic sur "Start Game"
 startGameButton.addEventListener('click', () => {
   window.location.href = 'game.html';
 });

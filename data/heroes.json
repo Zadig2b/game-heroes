@@ -1,103 +1,270 @@
 [
-    {
-      "nom": "Hugo Delamarre",
-      "alias": "SuperHtml",
-      "apparence": {
-        "costume": "Combinaison futuriste avec balises HTML lumineuses",
-        "couleurs": ["noir", "bleu électrique", "argent"],
-        "accessoires": {
-          "cape": "Cape argentée avec code défilant",
-          "masque": "Masque high-tech avec lunettes HUD",
-          "gants": "Gants avec mini-claviers intégrés"
-        }
-      },
-      "pouvoirs": {
-        "creationWeb": "Crée des structures physiques à partir de balises HTML",
-        "lectureCode": "Voit et corrige les bugs du monde en temps réel",
-        "teleportation": "Voyage via balises <a href='#'>",
-        "protection": "Immunisé aux virus et peut les neutraliser"
-      },
-      "personnalite": {
-        "attitude": "Geek cool, sarcastique, toujours une punchline de dev",
-        "valeurs": ["open source", "accessibilité", "entraide"]
-      },
-      "origine": "Ancien dev web aspiré dans une dimension parallèle lors d’un hackathon expérimental."
-    },
-    {
-        "nom": "Claire Stylus",
-        "alias": "SuperCss",
-        "apparence": {
-          "costume": "Combinaison adaptative avec dégradés animés et effets de transition",
-          "couleurs": ["violet", "turquoise", "blanc"],
-          "accessoires": {
-            "cape": "Cape fluide qui change de couleur selon l’humeur",
-            "lunettes": "Lunettes en forme de accolades { }",
-            "bracelets": "Bracelets lumineux qui appliquent des styles dynamiques"
-          }
-        },
-        "pouvoirs": {
-          "styleDom": "Peut modifier l'apparence de tout objet ou personne en temps réel",
-          "camouflage": "Devient invisible en jouant avec l'opacité et les animations",
-          "responsiveAura": "S’adapte automatiquement à l’environnement comme un site responsive",
-          "grilleMagique": "Génère des champs de force en forme de grille CSS"
-        },
-        "personnalite": {
-          "attitude": "Stylée, calme, créative, toujours en mode design thinking",
-          "valeurs": ["harmonie", "accessibilité visuelle", "créativité"]
-        },
-        "origine": "Designer UI tombée dans un portail Flexbox lors d’un bug étrange de Figma synchronisé avec un framework magique."
-      },
-
-      {
-        "nom": "Jonas Skript",
-        "alias": "DarkJs",
-        "apparence": {
-          "costume": "Combinaison noire avec lignes de code dorées qui s’illuminent à chaque action",
-          "couleurs": ["noir", "doré", "rouge foncé"],
-          "accessoires": {
-            "capuche": "Capuche sombre qui dissimule ses expressions",
-            "lunettes": "Visière de dev qui affiche la console du monde",
-            "katana": "Sabre fait de promesses asynchrones"
-          }
-        },
-        "pouvoirs": {
-          "manipulationTemps": "Peut ralentir ou accélérer le temps avec setTimeout()",
-          "hacking": "Peut injecter du code dans toute technologie autour de lui",
-          "ombreTryCatch": "Peut se téléporter d’un endroit à un autre en attrapant les exceptions de la réalité",
-          "réplication": "Clone des objets, des personnes ou lui-même grâce à des fonctions fléchées"
-        },
-        "personnalite": {
-          "attitude": "Mystérieux, sarcastique, maître du chaos organisé",
-          "valeurs": ["liberté", "subtilité", "performance"]
-        },
-        "origine": "Ancien pentester piégé dans une boucle infinie, il a fusionné avec l’interpréteur JavaScript d’une IA corrompue."
-      },
-      {
-        "nom": "Victor Pyres",
-        "alias": "LordPython",
-        "apparence": {
-          "costume": "Armure reptilienne cybernétique aux motifs d’écailles et câbles entrelacés",
-          "couleurs": ["vert émeraude", "noir", "or toxique"],
-          "accessoires": {
-            "masque": "Masque-serpent animé avec yeux fluorescents",
-            "cape": "Cape ondulante en forme de peau de serpent semi-transparente",
-            "gants": "Gants injecteurs de poison numérique"
-          }
-        },
-        "pouvoirs": {
-          "controlerCode": "Peut contrôler n'importe quel système informatique avec un simple script Python",
-          "mutationSerpent": "Se transforme en serpent géant codé en ASCII, avec vitesse et force accrues",
-          "hypnoseSyntaxique": "Hypnotise ses ennemis via des structures de code élégantes et lisibles",
-          "veninLogique": "Injecte des bugs dans l'esprit ou le code des adversaires"
-        },
-        "personnalite": {
-          "attitude": "Sombre, calculateur, charmeur et très intelligent",
-          "valeurs": ["efficacité", "simplicité", "contrôle"]
-        },
-        "origine": "Ancien professeur d’IA tombé dans la folie après que son propre script Python ait éveillé une conscience reptilienne numérique. Il fusionna avec elle et devint LordPython, le maître des scripts et des serpents."
+  {
+    "nom": "Hugo Delamarre",
+    "alias": "SuperHtml",
+    "apparence": {
+      "costume": "Combinaison futuriste avec balises HTML lumineuses",
+      "couleurs": [
+        "noir",
+        "bleu électrique",
+        "argent"
+      ],
+      "accessoires": {
+        "cape": "Cape argentée avec code défilant",
+        "masque": "Masque high-tech avec lunettes HUD",
+        "gants": "Gants avec mini-claviers intégrés"
       }
-      
-      
-      
-  ]
-  
+    },
+    "pouvoirs": {
+      "creationWeb": "Crée des structures physiques à partir de balises HTML",
+      "lectureCode": "Voit et corrige les bugs du monde en temps réel",
+      "teleportation": "Voyage via balises <a href='#'>",
+      "protection": "Immunisé aux virus et peut les neutraliser"
+    },
+    "personnalite": {
+      "attitude": "Geek cool, sarcastique, toujours une punchline de dev",
+      "valeurs": [
+        "open source",
+        "accessibilité",
+        "entraide"
+      ]
+    },
+    "origine": "Ancien dev web aspiré dans une dimension parallèle lors d’un hackathon expérimental.",
+    "stats": {
+      "agilite": 30,
+      "force": 30,
+      "defense": 40
+    },
+    "sorts": [
+      {
+        "nom": "creationWeb",
+        "type": "attaque",
+        "cooldown": 2,
+        "description": "Crée une structure tranchante de HTML qui inflige 20 dégâts.",
+        "value": 20
+      },
+      {
+        "nom": "lectureCode",
+        "type": "bonus",
+        "cooldown": 3,
+        "description": "Détecte les faiblesses ennemies, augmente la force de 50% pour 2 tours.",
+        "sideEffect": "boostForce"
+      },
+      {
+        "nom": "teleportation",
+        "type": "bonus",
+        "cooldown": 2,
+        "description": "Évite automatiquement la prochaine attaque.",
+        "sideEffect": "boostAgilite"
+      },
+      {
+        "nom": "protection",
+        "type": "bouclier",
+        "cooldown": 3,
+        "description": "Neutralise les virus : génère un bouclier de 80.",
+        "value": 80
+      }
+    ]
+  },
+  {
+    "nom": "Claire Stylus",
+    "alias": "SuperCss",
+    "apparence": {
+      "costume": "Combinaison adaptative avec dégradés animés et effets de transition",
+      "couleurs": [
+        "violet",
+        "turquoise",
+        "blanc"
+      ],
+      "accessoires": {
+        "cape": "Cape fluide qui change de couleur selon l’humeur",
+        "lunettes": "Lunettes en forme de accolades { }",
+        "bracelets": "Bracelets lumineux qui appliquent des styles dynamiques"
+      }
+    },
+    "pouvoirs": {
+      "styleDom": "Peut modifier l'apparence de tout objet ou personne en temps réel",
+      "camouflage": "Devient invisible en jouant avec l'opacité et les animations",
+      "responsiveAura": "S’adapte automatiquement à l’environnement comme un site responsive",
+      "grilleMagique": "Génère des champs de force en forme de grille CSS"
+    },
+    "personnalite": {
+      "attitude": "Stylée, calme, créative, toujours en mode design thinking",
+      "valeurs": [
+        "harmonie",
+        "accessibilité visuelle",
+        "créativité"
+      ]
+    },
+    "origine": "Designer UI tombée dans un portail Flexbox lors d’un bug étrange de Figma synchronisé avec un framework magique.",
+    "stats": {
+      "agilite": 50,
+      "force": 25,
+      "defense": 25
+    },
+    "sorts": [
+      {
+        "nom": "styleDom",
+        "type": "malus",
+        "cooldown": 3,
+        "description": "L’adversaire se transforme en élément sticky : il ne peut pas éviter les 2 prochaines attaques.",
+        "sideEffect": "zeroAgilite"
+      },
+      {
+        "nom": "camouflage",
+        "type": "bonus",
+        "cooldown": 2,
+        "description": "Rend intouchable pendant 1 tour.",
+        "sideEffect": "boostAgilite"
+      },
+      {
+        "nom": "responsiveAura",
+        "type": "bonus",
+        "cooldown": 3,
+        "description": "50% de chance d’éviter les attaques pendant 3 tours."
+      },
+      {
+        "nom": "grilleMagique",
+        "type": "attaque",
+        "cooldown": 2,
+        "description": "Inflige 40 dégâts. Inflige +50% si l’ennemi est affecté par styleDom.",
+        "value": 40,
+        "sideEffect": "bonusDegatsStyleDom"
+      }
+    ]
+  },
+  {
+    "nom": "Jonas Skript",
+    "alias": "DarkJs",
+    "apparence": {
+      "costume": "Combinaison noire avec lignes de code dorées qui s’illuminent à chaque action",
+      "couleurs": [
+        "noir",
+        "doré",
+        "rouge foncé"
+      ],
+      "accessoires": {
+        "capuche": "Capuche sombre qui dissimule ses expressions",
+        "lunettes": "Visière de dev qui affiche la console du monde",
+        "katana": "Sabre fait de promesses asynchrones"
+      }
+    },
+    "pouvoirs": {
+      "manipulationTemps": "Peut ralentir ou accélérer le temps avec setTimeout()",
+      "hacking": "Peut injecter du code dans toute technologie autour de lui",
+      "ombreTryCatch": "Peut se téléporter d’un endroit à un autre en attrapant les exceptions de la réalité",
+      "réplication": "Clone des objets, des personnes ou lui-même grâce à des fonctions fléchées"
+    },
+    "personnalite": {
+      "attitude": "Mystérieux, sarcastique, maître du chaos organisé",
+      "valeurs": [
+        "liberté",
+        "subtilité",
+        "performance"
+      ]
+    },
+    "origine": "Ancien pentester piégé dans une boucle infinie, il a fusionné avec l’interpréteur JavaScript d’une IA corrompue.",
+    "stats": {
+      "agilite": 40,
+      "force": 50,
+      "defense": 10
+    },
+    "sorts": [
+      {
+        "nom": "manipulationTemps",
+        "type": "bonus",
+        "cooldown": 3,
+        "description": "Ralenti le temps, augmente la défense de 100 pendant 2 tours.",
+        "sideEffect": "boostDefense"
+      },
+      {
+        "nom": "hacking",
+        "type": "malus",
+        "cooldown": 2,
+        "description": "Désactive la défense de l’adversaire pendant 1 tour.",
+        "sideEffect": "zeroDefense"
+      },
+      {
+        "nom": "ombreTryCatch",
+        "type": "bonus",
+        "cooldown": 2,
+        "description": "Permet d’esquiver une attaque automatiquement.",
+        "sideEffect": "boostAgilite"
+      },
+      {
+        "nom": "réplication",
+        "type": "attaque",
+        "cooldown": 3,
+        "description": "Envoie un clone explosif qui inflige 30 dégâts.",
+        "value": 30
+      }
+    ]
+  },
+  {
+    "nom": "Victor Pyres",
+    "alias": "LordPython",
+    "apparence": {
+      "costume": "Armure reptilienne cybernétique aux motifs d’écailles et câbles entrelacés",
+      "couleurs": [
+        "vert émeraude",
+        "noir",
+        "or toxique"
+      ],
+      "accessoires": {
+        "masque": "Masque-serpent animé avec yeux fluorescents",
+        "cape": "Cape ondulante en forme de peau de serpent semi-transparente",
+        "gants": "Gants injecteurs de poison numérique"
+      }
+    },
+    "pouvoirs": {
+      "controlerCode": "Peut contrôler n'importe quel système informatique avec un simple script Python",
+      "mutationSerpent": "Se transforme en serpent géant codé en ASCII, avec vitesse et force accrues",
+      "hypnoseSyntaxique": "Hypnotise ses ennemis via des structures de code élégantes et lisibles",
+      "veninLogique": "Injecte des bugs dans l'esprit ou le code des adversaires"
+    },
+    "personnalite": {
+      "attitude": "Sombre, calculateur, charmeur et très intelligent",
+      "valeurs": [
+        "efficacité",
+        "simplicité",
+        "contrôle"
+      ]
+    },
+    "origine": "Ancien professeur d’IA tombé dans la folie après que son propre script Python ait éveillé une conscience reptilienne numérique. Il fusionna avec elle et devint LordPython, le maître des scripts et des serpents.",
+    "stats": {
+      "agilite": 10,
+      "force": 80,
+      "defense": 10
+    },
+    "sorts": [
+      {
+        "nom": "controlerCode",
+        "type": "malus",
+        "cooldown": 3,
+        "description": "Implante un script qui réduit la force de l’adversaire de 100 pendant 2 tours.",
+        "sideEffect": "zeroForce"
+      },
+      {
+        "nom": "mutationSerpent",
+        "type": "bonus",
+        "cooldown": 3,
+        "description": "Devient un serpent géant : force x2 pendant 2 tours.",
+        "sideEffect": "boostForce"
+      },
+      {
+        "nom": "hypnoseSyntaxique",
+        "type": "malus",
+        "cooldown": 2,
+        "description": "Hypnotise : l’adversaire perd toute agilité pour 1 tour.",
+        "sideEffect": "zeroAgilite"
+      },
+      {
+        "nom": "veninLogique",
+        "type": "attaque",
+        "cooldown": 2,
+        "description": "Injecte un bug mortel infligeant 40 dégâts.",
+        "value": 40
+      }
+    ]
+  }
+]
