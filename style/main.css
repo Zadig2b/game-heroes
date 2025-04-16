@@ -1,10 +1,30 @@
 body {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  justify-content: center;
   background: #0d1117;
   color: white;
   font-family: 'Arial', sans-serif;
   text-align: center;
-  margin: 0;
+  margin-left: 10px;
   padding: 20px;
+}
+
+#main {
+width: 50vw;
+}
+
+#player1Img, #player2Img {
+  max-width: 25vw;
+}
+
+#player1Img img {
+  max-width: 25vw;
+}
+
+#player2Img img {
+  max-width: 25vw;
 }
 
 #heroes-container {
@@ -27,6 +47,7 @@ body {
 }
 
 #hero-details {
+  position: relative;
   margin: 20px auto;
   max-width: 600px;
   background: rgba(255, 255, 255, 0.05);
@@ -64,11 +85,11 @@ body {
 }
 
 #start-game {
-  margin-top: 30px;
   padding: 12px 24px;
   font-size: 18px;
-  background: #00ffff;
-  color: #000;
+  background: #6d31cf;
+  border: 2px solid #4e2196;
+  color: #ffffff;
   border: none;
   border-radius: 8px;
   cursor: pointer;
@@ -76,20 +97,84 @@ body {
 }
 
 #start-game:hover {
-  background: #00cccc;
+  background: #ad98cf;
+  color: black;
 }
 
 .hero-card {
-  border: 2px solid transparent;
+  /* border: 2px solid transparent; */
   border-radius: 10px;
   transition: border 0.2s ease, transform 0.2s ease;
 }
 
 .hero-card:hover {
-  border: 2px solid #00ffff55;
+  /* border: 2px solid #00ffff55; */
   transform: scale(1.05);
 }
 
 .selected-hero {
   border: 2px solid #00ffff !important;
+}
+
+.stat-item {
+  position: relative;
+  display: inline-block;
+  margin: 6px 0;
+  cursor: help;
+}
+
+.stat-item .tooltip {
+  visibility: hidden;
+  opacity: 0;
+  background: #fff;
+  color: #000;
+  text-align: left;
+  padding: 6px 10px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 100;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: pre-wrap;
+  width: 220px;
+  font-size: 13px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.2s ease;
+}
+
+.stat-item:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip-container {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+}
+
+.tooltip {
+  visibility: hidden;
+  opacity: 0;
+  background: #fff;
+  color: #000;
+  text-align: left;
+  padding: 6px 10px;
+  border-radius: 6px;
+  position: absolute;
+  z-index: 100;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: pre-wrap;
+  width: 220px;
+  font-size: 13px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  transition: opacity 0.2s ease;
+}
+
+.tooltip-container:hover .tooltip {
+  visibility: visible;
+  opacity: 1;
 }
