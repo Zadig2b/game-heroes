@@ -93,8 +93,9 @@ export class Hero {
         switch (sort.effect) {
           case 'reduceAgilite':
             cible.buffs.push({ stat: 'agilite', value: cible.agilite, duration });
-            cible.agilite = sort.value;
-            effet = `${cible.alias} voit son agilité réduite à ${sort.value} pour ${duration} tours.`;
+            const newAgility= Math.floor(cible.agilite * (sort.value / 100));
+            cible.agilite = newAgility;
+            effet = `${cible.alias} voit son agilité réduite à ${newAgility} pour ${duration} tours.`;
             break;
           case 'reduceForce':
             cible.buffs.push({ stat: 'force', value: cible.force, duration });

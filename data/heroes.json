@@ -33,7 +33,7 @@
       {
         "nom": "creationWeb",
         "type": "attaque",
-        "cooldown": 2,
+        "cooldown": 1,
         "description": "Crée une structure tranchante de HTML qui inflige 20 dégâts.",
         "value": 20,
         "alt-desc": "Crée des structures physiques à partir de balises HTML"
@@ -204,7 +204,7 @@
       {
         "nom": "réplication",
         "type": "attaque",
-        "cooldown": 3,
+        "cooldown": 1,
         "description": "Envoie un clone explosif qui inflige 30 dégâts.",
         "value": 30,
         "alt-desc": "Clone des objets, des personnes ou lui-même grâce à des fonctions fléchées"
