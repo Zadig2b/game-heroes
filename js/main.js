@@ -18,6 +18,8 @@ const playerLabels = ["Joueur 1", "Joueur 2"];
 startGameButton.textContent = "Choisir un héros";
 startGameButton.disabled = true;
 
+
+
 function saveHeroesToLocalStorage() {
   localStorage.setItem("selectedHeroes", JSON.stringify(selectedHeroes));
 }
@@ -34,6 +36,12 @@ fetch("./data/heroes.json")
       heroImgContainer.classList.add("hero-card");
       heroImgContainer.appendChild(heroImg);
       heroImg.addEventListener("click", () => {
+
+        const audio = document.getElementById("title-audio");
+        audio.volume = 0.3; // optionnel : volume réduit
+        audio.play().catch((e) => {
+          console.warn("Lecture audio bloquée par le navigateur. En attente d'une interaction.");
+        });
         // Supprime la sélection précédente
         if (previousSelectedImg) {
           previousSelectedImg.classList.remove("selected-hero");

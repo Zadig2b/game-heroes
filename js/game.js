@@ -4,6 +4,7 @@ import { renderPower, renderSpells } from "../components/powerCard.js";
 
 const playground = document.getElementById("playground");
 const heroZone = document.getElementById("hero-zone");
+const infoContainer =document.getElementById("info-container")
 
 const selectedHeroes = JSON.parse(localStorage.getItem("selectedHeroes"));
 
@@ -80,6 +81,12 @@ function afficherInfos(index) {
     cible: index === 0 ? joueur2 : joueur1,
     isActivePlayer: index === currentPlayerIndex,
     onSpellCast: (sort) => {
+      const audio = document.getElementById("battle-audio");
+      audio.volume = 0.3; 
+      audio.play().catch((e) => {
+        console.warn("Lecture audio bloquée par le navigateur. En attente d'une interaction.");
+      });
+
       const cible = index === 0 ? joueur2 : joueur1;
       const feedback = joueur.lancerSort(sort.nom, cible);
       showToast(feedback);
@@ -133,7 +140,7 @@ function showToast(message) {
   if (!toast) {
     toast = document.createElement("div");
     toast.id = "toast-message";
-    document.body.appendChild(toast);
+    infoContainer.appendChild(toast);
   }
 
   toast.textContent = message;

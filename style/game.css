@@ -6,13 +6,13 @@ body {
   text-align: center;
 }
 
-#game-container {
+/* #game-container {
   padding: 40px;
   height: 50vh;
-}
+} */
 
 #playground {
-  width: 80%;
+  /* width: 80%; */
   min-height: 500px;
   margin: 20px auto;
   background: linear-gradient(145deg, #1e222b, #11161e);
@@ -21,9 +21,10 @@ body {
   box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
   position: relative;
   display: flex;
+  align-items: center;
   justify-content: space-around;
   padding: 20px;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   gap: 40px;
 }
 
@@ -77,7 +78,7 @@ button:disabled {
   top: 0;
   bottom: 0;
   width: var(--pv, 100%);
-  background: linear-gradient(to right, #00ff00, #ff0000);
+  background: linear-gradient(to right, #ff0000, #00ff00);
   transition: width 0.3s ease;
 }
 
@@ -86,11 +87,12 @@ button:disabled {
 }
 
 #toast-message {
-  position: fixed;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-  background: rgb(0, 255, 255);
+  /* position: fixed; */
+  /* top: 20px;
+  left: 50%; */
+  /* transform: translateX(-50%); */
+  max-width: 300px;
+  background: rgb(154, 191, 191);
   color: rgb(0, 0, 0);
   padding: 12px 20px;
   border-radius: 10px;
@@ -98,6 +100,8 @@ button:disabled {
   z-index: 9999;
   box-shadow: rgba(0, 255, 255, 0.5) 0px 0px 10px;
 }
+
+
 
 @keyframes hitFlash {
   0% {
@@ -209,4 +213,17 @@ button:disabled {
   color: white;
   border: none;
   border-radius: 8px;
+}
+
+@media (max-width: 930px) {
+  #playground {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #hero-zone,
+  #enemy-zone {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
 }
