@@ -82,7 +82,7 @@ export class Hero {
             this.buffs.push({ stat: 'defense', value: this.defense, duration });
             const nouvelleDefense = this.baseDefense + sort.value;
             this.defense = nouvelleDefense;
-            effet = `${this.alias} augmente sa défense à ${nouvelleDefense} (${sort.value}%) pour ${duration} tours.`;
+            effet = `${this.alias} augmente sa défense à ${nouvelleDefense} (+${sort.value}) pour ${duration} tours.`;
             break;
           }
           default:
