@@ -4,11 +4,7 @@
     "alias": "SuperHtml",
     "apparence": {
       "costume": "Combinaison futuriste avec balises HTML lumineuses",
-      "couleurs": [
-        "noir",
-        "bleu électrique",
-        "argent"
-      ],
+      "couleurs": ["noir", "bleu électrique", "argent"],
       "accessoires": {
         "cape": "Cape argentée avec code défilant",
         "masque": "Masque high-tech avec lunettes HUD",
@@ -23,11 +19,7 @@
     },
     "personnalite": {
       "attitude": "Geek cool, sarcastique, toujours une punchline de dev",
-      "valeurs": [
-        "open source",
-        "accessibilité",
-        "entraide"
-      ]
+      "valeurs": ["open source", "accessibilité", "entraide"]
     },
     "origine": "Ancien dev web aspiré dans une dimension parallèle lors d’un hackathon expérimental.",
     "stats": {
@@ -50,8 +42,7 @@
         "description": "Détecte les faiblesses ennemies, doublant sa force pour 2 tours.",
         "effect": "boostForce",
         "value": 200,
-        "duration":2
-
+        "duration": 2
       },
       {
         "nom": "teleportation",
@@ -60,8 +51,7 @@
         "description": "Évite à coup sûr la prochaine attaque: 100 agilité pour 1 tour",
         "effect": "boostAgilite",
         "value": 100,
-        "duration":1
-
+        "duration": 1
       },
       {
         "nom": "protection",
@@ -77,11 +67,7 @@
     "alias": "SuperCss",
     "apparence": {
       "costume": "Combinaison adaptative avec dégradés animés et effets de transition",
-      "couleurs": [
-        "violet",
-        "turquoise",
-        "blanc"
-      ],
+      "couleurs": ["violet", "turquoise", "blanc"],
       "accessoires": {
         "cape": "Cape fluide qui change de couleur selon l’humeur",
         "lunettes": "Lunettes en forme de accolades { }",
@@ -96,11 +82,7 @@
     },
     "personnalite": {
       "attitude": "Stylée, calme, créative, toujours en mode design thinking",
-      "valeurs": [
-        "harmonie",
-        "accessibilité visuelle",
-        "créativité"
-      ]
+      "valeurs": ["harmonie", "accessibilité visuelle", "créativité"]
     },
     "origine": "Designer UI tombée dans un portail Flexbox lors d’un bug étrange de Figma synchronisé avec un framework magique.",
     "stats": {
@@ -116,8 +98,7 @@
         "description": "L’adversaire se transforme en élément sticky : il ne peut pas éviter les 2 prochaines attaques.",
         "effect": "reduceAgilite",
         "value": 0,
-        "duration":2
-
+        "duration": 2
       },
       {
         "nom": "camouflage",
@@ -126,8 +107,7 @@
         "description": "Rend intouchable pendant 1 tour.",
         "effect": "boostAgilite",
         "value": 100,
-        "duration":1
-
+        "duration": 1
       },
       {
         "nom": "responsiveAura",
@@ -136,7 +116,7 @@
         "description": "triple la force pendant 2 tours",
         "effect": "boostForce",
         "value": 300,
-        "duration":2
+        "duration": 2
       },
       {
         "nom": "grilleMagique",
@@ -153,11 +133,7 @@
     "alias": "DarkJs",
     "apparence": {
       "costume": "Combinaison noire avec lignes de code dorées qui s’illuminent à chaque action",
-      "couleurs": [
-        "noir",
-        "doré",
-        "rouge foncé"
-      ],
+      "couleurs": ["noir", "doré", "rouge foncé"],
       "accessoires": {
         "capuche": "Capuche sombre qui dissimule ses expressions",
         "lunettes": "Visière de dev qui affiche la console du monde",
@@ -172,11 +148,7 @@
     },
     "personnalite": {
       "attitude": "Mystérieux, sarcastique, maître du chaos organisé",
-      "valeurs": [
-        "liberté",
-        "subtilité",
-        "performance"
-      ]
+      "valeurs": ["liberté", "subtilité", "performance"]
     },
     "origine": "Ancien pentester piégé dans une boucle infinie, il a fusionné avec l’interpréteur JavaScript d’une IA corrompue.",
     "stats": {
@@ -192,8 +164,7 @@
         "description": "Ralenti le temps, augmente la défense de 80 pendant 2 tours.",
         "effect": "boostDefense",
         "value": 80,
-        "duration":2
-
+        "duration": 2
       },
       {
         "nom": "hacking",
@@ -201,9 +172,8 @@
         "cooldown": 2,
         "description": "Défense de l'adversaire réduite jusqu'au prochain tour",
         "effect": "reduceDefense",
-        "value":-40,
-        "duration":1
-
+        "value": -40,
+        "duration": 1
       },
       {
         "nom": "ombreTryCatch",
@@ -212,8 +182,7 @@
         "description": "100 agilité jusqu'au prochain tour",
         "effect": "boostAgilite",
         "value": 100,
-        "duration":1
-
+        "duration": 1
       },
       {
         "nom": "réplication",
@@ -229,11 +198,7 @@
     "alias": "LordPython",
     "apparence": {
       "costume": "Armure reptilienne cybernétique aux motifs d’écailles et câbles entrelacés",
-      "couleurs": [
-        "vert émeraude",
-        "noir",
-        "or toxique"
-      ],
+      "couleurs": ["vert émeraude", "noir", "or toxique"],
       "accessoires": {
         "masque": "Masque-serpent animé avec yeux fluorescents",
         "cape": "Cape ondulante en forme de peau de serpent semi-transparente",
@@ -248,11 +213,7 @@
     },
     "personnalite": {
       "attitude": "Sombre, calculateur, charmeur et très intelligent",
-      "valeurs": [
-        "efficacité",
-        "simplicité",
-        "contrôle"
-      ]
+      "valeurs": ["efficacité", "simplicité", "contrôle"]
     },
     "origine": "Ancien professeur d’IA tombé dans la folie après que son propre script Python ait éveillé une conscience reptilienne numérique. Il fusionna avec elle et devint LordPython, le maître des scripts et des serpents.",
     "stats": {
@@ -276,8 +237,7 @@
         "description": "Devient un serpent géant : force x2 pendant 2 tours.",
         "effect": "boostForce",
         "value": 200,
-        "duration":2
-
+        "duration": 2
       },
       {
         "nom": "hypnoseSyntaxique",
@@ -286,8 +246,7 @@
         "description": "Hypnotise : l’adversaire perd toute agilité pour 2 tour.",
         "effect": "reduceAgilite",
         "value": 0,
-        "duration":2
-
+        "duration": 2
       },
       {
         "nom": "veninLogique",
