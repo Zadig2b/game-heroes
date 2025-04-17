@@ -4,14 +4,15 @@ import { renderPower, renderSpells } from "../components/powerCard.js";
 
 const playground = document.getElementById("playground");
 const heroZone = document.getElementById("hero-zone");
-const infoContainer =document.getElementById("info-container")
+const enemyZone = document.getElementById("enemy-zone");
+const infoContainer = document.getElementById("info-container");
 
 const selectedHeroes = JSON.parse(localStorage.getItem("selectedHeroes"));
 
 let joueur1 = null;
 let joueur2 = null;
 let currentPlayerIndex = 0;
-const zones = [heroZone, null];
+const zones = [heroZone, enemyZone];
 
 if (!selectedHeroes || selectedHeroes.length < 2) {
   heroZone.innerHTML =
@@ -36,10 +37,6 @@ if (!selectedHeroes || selectedHeroes.length < 2) {
     selectedHeroes[1].sorts
   );
 
-  const enemyZone = document.createElement("div");
-  enemyZone.id = "enemy-zone";
-  playground.appendChild(enemyZone);
-  zones[1] = enemyZone;
 
   afficherInfos(0);
   afficherInfos(1);
@@ -48,13 +45,14 @@ if (!selectedHeroes || selectedHeroes.length < 2) {
 function afficherInfos(index) {
   const joueur = index === 0 ? joueur1 : joueur2;
   const zone = zones[index];
-
   const wrapper = document.createElement("div");
   wrapper.innerHTML = `
-    <h2>${joueur.alias} <span class="pv-bar" data-index="${index}" style="--pv: 100%;"></span></h2>
-    <img src="assets/heroes/${joueur.alias}/${joueur.alias}.webp" alt="${joueur.alias}" style="width:150px;border-radius:10px;" />
-    <p>${joueur.origine}</p>
-    <p><strong>PV:</strong> <span class="pv-value">${joueur.pv}</span></p>
+    <h2>${joueur.alias} <span class="pv-bar" data-index="${index}" style="--pv: 100%;">
+  <span class="pv-label">${joueur.pv}</span>
+</span>
+</h2>
+    <img src="assets/heroes/${joueur.alias}/${joueur.alias}.webp" alt="${joueur.alias}"  />
+<div class="stat-container">
 
 <div class="stat-item">
   🌀 <strong>Agilité:</strong> ${joueur.agilite}
@@ -67,6 +65,7 @@ function afficherInfos(index) {
 <div class="stat-item">
   🛡️ <strong>Défense:</strong> ${joueur.defense}
   <span class="tooltip">Réduction de dégâts (%)</span>
+</div>
 </div>
 
   `;
@@ -82,9 +81,11 @@ function afficherInfos(index) {
     isActivePlayer: index === currentPlayerIndex,
     onSpellCast: (sort) => {
       const audio = document.getElementById("battle-audio");
-      audio.volume = 0.3; 
+      audio.volume = 0.3;
       audio.play().catch((e) => {
-        console.warn("Lecture audio bloquée par le navigateur. En attente d'une interaction.");
+        console.warn(
+          "Lecture audio bloquée par le navigateur. En attente d'une interaction."
+        );
       });
 
       const cible = index === 0 ? joueur2 : joueur1;
@@ -113,7 +114,12 @@ function changerTour() {
   joueurActuel.reduireCooldowns();
 
   currentPlayerIndex = 1 - currentPlayerIndex;
-
+  // Mettre à jour la classe active sur les zones
+  zones.forEach((zone, i) => {
+    if (zone) {
+      zone.classList.toggle("active-player", i === currentPlayerIndex);
+    }
+  });
   afficherInfos(0);
   afficherInfos(1);
   updatePVBar(0, joueur1.pv);
