@@ -4,24 +4,22 @@
     "alias": "SuperHtml",
     "apparence": {
       "costume": "Combinaison futuriste avec balises HTML lumineuses",
-      "couleurs": [
-        "noir",
-        "bleu électrique",
-        "argent"
-      ],
+      "couleurs": ["noir", "bleu électrique", "argent"],
       "accessoires": {
         "cape": "Cape argentée avec code défilant",
         "masque": "Masque high-tech avec lunettes HUD",
         "gants": "Gants avec mini-claviers intégrés"
       }
     },
+    "pouvoirs": {
+      "creationWeb": "Crée des structures physiques à partir de balises HTML",
+      "lectureCode": "Voit et corrige les bugs du monde en temps réel",
+      "teleportation": "Voyage via balises <a href='#'>",
+      "protection": "Immunisé aux virus et peut les neutraliser"
+    },
     "personnalite": {
       "attitude": "Geek cool, sarcastique, toujours une punchline de dev",
-      "valeurs": [
-        "open source",
-        "accessibilité",
-        "entraide"
-      ]
+      "valeurs": ["open source", "accessibilité", "entraide"]
     },
     "origine": "Ancien dev web aspiré dans une dimension parallèle lors d’un hackathon expérimental.",
     "stats": {
@@ -35,8 +33,7 @@
         "type": "attaque",
         "cooldown": 2,
         "description": "Crée une structure tranchante de HTML qui inflige 20 dégâts.",
-        "value": 20,
-        "alt-desc": "Crée des structures physiques à partir de balises HTML"
+        "value": 20
       },
       {
         "nom": "lectureCode",
@@ -45,8 +42,7 @@
         "description": "Détecte les faiblesses ennemies, doublant sa force pour 2 tours.",
         "effect": "boostForce",
         "value": 200,
-        "duration": 2,
-        "alt-desc": "Voit et corrige les bugs du monde en temps réel"
+        "duration": 2
       },
       {
         "nom": "teleportation",
@@ -55,16 +51,14 @@
         "description": "Évite à coup sûr la prochaine attaque: 100 agilité pour 1 tour",
         "effect": "boostAgilite",
         "value": 100,
-        "duration": 1,
-        "alt-desc": "Voyage via balises <a href='#'>"
+        "duration": 1
       },
       {
         "nom": "protection",
         "type": "bouclier",
         "cooldown": 3,
         "description": "Neutralise les virus : génère un bouclier de 80.",
-        "value": 80,
-        "alt-desc": "Immunisé aux virus et peut les neutraliser"
+        "value": 80
       }
     ]
   },
@@ -73,24 +67,22 @@
     "alias": "SuperCss",
     "apparence": {
       "costume": "Combinaison adaptative avec dégradés animés et effets de transition",
-      "couleurs": [
-        "violet",
-        "turquoise",
-        "blanc"
-      ],
+      "couleurs": ["violet", "turquoise", "blanc"],
       "accessoires": {
         "cape": "Cape fluide qui change de couleur selon l’humeur",
         "lunettes": "Lunettes en forme de accolades { }",
         "bracelets": "Bracelets lumineux qui appliquent des styles dynamiques"
       }
     },
+    "pouvoirs": {
+      "styleDom": "Peut modifier l'apparence de tout objet ou personne en temps réel",
+      "camouflage": "Devient invisible en jouant avec l'opacité et les animations",
+      "responsiveAura": "S’adapte automatiquement à l’environnement comme un site responsive",
+      "grilleMagique": "Génère des champs de force en forme de grille CSS"
+    },
     "personnalite": {
       "attitude": "Stylée, calme, créative, toujours en mode design thinking",
-      "valeurs": [
-        "harmonie",
-        "accessibilité visuelle",
-        "créativité"
-      ]
+      "valeurs": ["harmonie", "accessibilité visuelle", "créativité"]
     },
     "origine": "Designer UI tombée dans un portail Flexbox lors d’un bug étrange de Figma synchronisé avec un framework magique.",
     "stats": {
@@ -106,8 +98,7 @@
         "description": "L’adversaire se transforme en élément sticky : il ne peut pas éviter les 2 prochaines attaques.",
         "effect": "reduceAgilite",
         "value": 0,
-        "duration": 2,
-        "alt-desc": "Peut modifier l'apparence de tout objet ou personne en temps réel"
+        "duration": 2
       },
       {
         "nom": "camouflage",
@@ -116,8 +107,7 @@
         "description": "50% de chances d'esquiver la prochaine attaque",
         "effect": "boostAgilite",
         "value": 50,
-        "duration": 1,
-        "alt-desc": "Devient invisible en jouant avec l'opacité et les animations"
+        "duration": 1
       },
       {
         "nom": "responsiveAura",
@@ -126,8 +116,7 @@
         "description": "triple la force pendant 2 tours",
         "effect": "boostForce",
         "value": 300,
-        "duration": 2,
-        "alt-desc": "S’adapte automatiquement à l’environnement comme un site responsive"
+        "duration": 2
       },
       {
         "nom": "grilleMagique",
@@ -135,8 +124,7 @@
         "cooldown": 2,
         "description": "Inflige 40 dégâts. Inflige le double si l’ennemi est affecté par styleDom.",
         "value": 40,
-        "sideEffect": "bonusDegatsStyleDom",
-        "alt-desc": "Génère des champs de force en forme de grille CSS"
+        "sideEffect": "bonusDegatsStyleDom"
       }
     ]
   },
@@ -145,24 +133,22 @@
     "alias": "DarkJs",
     "apparence": {
       "costume": "Combinaison noire avec lignes de code dorées qui s’illuminent à chaque action",
-      "couleurs": [
-        "noir",
-        "doré",
-        "rouge foncé"
-      ],
+      "couleurs": ["noir", "doré", "rouge foncé"],
       "accessoires": {
         "capuche": "Capuche sombre qui dissimule ses expressions",
         "lunettes": "Visière de dev qui affiche la console du monde",
         "katana": "Sabre fait de promesses asynchrones"
       }
     },
+    "pouvoirs": {
+      "manipulationTemps": "Peut ralentir ou accélérer le temps avec setTimeout()",
+      "hacking": "Peut injecter du code dans toute technologie autour de lui",
+      "ombreTryCatch": "Peut se téléporter d’un endroit à un autre en attrapant les exceptions de la réalité",
+      "réplication": "Clone des objets, des personnes ou lui-même grâce à des fonctions fléchées"
+    },
     "personnalite": {
       "attitude": "Mystérieux, sarcastique, maître du chaos organisé",
-      "valeurs": [
-        "liberté",
-        "subtilité",
-        "performance"
-      ]
+      "valeurs": ["liberté", "subtilité", "performance"]
     },
     "origine": "Ancien pentester piégé dans une boucle infinie, il a fusionné avec l’interpréteur JavaScript d’une IA corrompue.",
     "stats": {
@@ -178,8 +164,7 @@
         "description": "Ralenti le temps, augmente la défense de 80 pendant 2 tours.",
         "effect": "boostDefense",
         "value": 80,
-        "duration": 2,
-        "alt-desc": "Peut ralentir ou accélérer le temps avec setTimeout()"
+        "duration": 2
       },
       {
         "nom": "hacking",
@@ -188,8 +173,7 @@
         "description": "Défense de l'adversaire réduite jusqu'au prochain tour",
         "effect": "reduceDefense",
         "value": -40,
-        "duration": 1,
-        "alt-desc": "Peut injecter du code dans toute technologie autour de lui"
+        "duration": 1
       },
       {
         "nom": "ombreTryCatch",
@@ -198,16 +182,14 @@
         "description": "100 agilité jusqu'au prochain tour",
         "effect": "boostAgilite",
         "value": 100,
-        "duration": 1,
-        "alt-desc": "Peut se téléporter d’un endroit à un autre en attrapant les exceptions de la réalité"
+        "duration": 1
       },
       {
         "nom": "réplication",
         "type": "attaque",
         "cooldown": 3,
         "description": "Envoie un clone explosif qui inflige 30 dégâts.",
-        "value": 30,
-        "alt-desc": "Clone des objets, des personnes ou lui-même grâce à des fonctions fléchées"
+        "value": 30
       }
     ]
   },
@@ -216,24 +198,22 @@
     "alias": "LordPython",
     "apparence": {
       "costume": "Armure reptilienne cybernétique aux motifs d’écailles et câbles entrelacés",
-      "couleurs": [
-        "vert émeraude",
-        "noir",
-        "or toxique"
-      ],
+      "couleurs": ["vert émeraude", "noir", "or toxique"],
       "accessoires": {
         "masque": "Masque-serpent animé avec yeux fluorescents",
         "cape": "Cape ondulante en forme de peau de serpent semi-transparente",
         "gants": "Gants injecteurs de poison numérique"
       }
     },
+    "pouvoirs": {
+      "controlerCode": "Peut contrôler n'importe quel système informatique avec un simple script Python",
+      "mutationSerpent": "Se transforme en serpent géant codé en ASCII, avec vitesse et force accrues",
+      "hypnoseSyntaxique": "Hypnotise ses ennemis via des structures de code élégantes et lisibles",
+      "veninLogique": "Injecte des bugs dans l'esprit ou le code des adversaires"
+    },
     "personnalite": {
       "attitude": "Sombre, calculateur, charmeur et très intelligent",
-      "valeurs": [
-        "efficacité",
-        "simplicité",
-        "contrôle"
-      ]
+      "valeurs": ["efficacité", "simplicité", "contrôle"]
     },
     "origine": "Ancien professeur d’IA tombé dans la folie après que son propre script Python ait éveillé une conscience reptilienne numérique. Il fusionna avec elle et devint LordPython, le maître des scripts et des serpents.",
     "stats": {
@@ -248,8 +228,7 @@
         "cooldown": 3,
         "description": "Implante un script qui réduit la force de l’adversaire pendant 2 tours.",
         "effect": "reduceForce",
-        "value": 0,
-        "alt-desc": "Peut contrôler n'importe quel système informatique avec un simple script Python"
+        "value": 0
       },
       {
         "nom": "mutationSerpent",
@@ -258,8 +237,7 @@
         "description": "Devient un serpent géant : force x2 pendant 2 tours.",
         "effect": "boostForce",
         "value": 200,
-        "duration": 2,
-        "alt-desc": "Se transforme en serpent géant codé en ASCII, avec vitesse et force accrues"
+        "duration": 2
       },
       {
         "nom": "hypnoseSyntaxique",
@@ -268,16 +246,14 @@
         "description": "Hypnotise : l’adversaire perd toute agilité pour 2 tour.",
         "effect": "reduceAgilite",
         "value": 0,
-        "duration": 2,
-        "alt-desc": "Hypnotise ses ennemis via des structures de code élégantes et lisibles"
+        "duration": 2
       },
       {
         "nom": "veninLogique",
         "type": "attaque",
         "cooldown": 2,
         "description": "Injecte un bug mortel infligeant 40 dégâts.",
-        "value": 40,
-        "alt-desc": "Injecte des bugs dans l'esprit ou le code des adversaires"
+        "value": 40
       }
     ]
   }

@@ -1,5 +1,5 @@
 export class Sort {
-  constructor(nom, type, cooldown, description, value = 0, effect = null, sideEffect = null, duration = 2) {
+  constructor(nom, type, cooldown, description, value = 0, effect = null, sideEffect = null, duration = 2, altdesc) {
     this.nom = nom;
     this.type = type;
     this.cooldown = cooldown;
@@ -9,6 +9,7 @@ export class Sort {
     this.effect = effect;
     this.sideEffect = sideEffect;
     this.duration = duration;
+    this.altdesc = altdesc
   }
 
   estDisponible() {

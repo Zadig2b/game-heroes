@@ -55,8 +55,9 @@ fetch("./data/heroes.json")
             .map((v) => `<li>${v}</li>`)
             .join("")}</ul>
         `;
-        renderAllPowers(powersContainer, alias, heroData.pouvoirs);
-        heroDetails.appendChild(powersContainer);
+        const pouvoirs = Object.fromEntries(heroData.sorts.map(s => [s.nom, s["alt-desc"]]));
+        renderAllPowers(powersContainer, alias, pouvoirs);
+                heroDetails.appendChild(powersContainer);
 
         // Active le bouton
         startGameButton.disabled = false;

@@ -1,11 +1,10 @@
 import { Sort } from './sort.js';
 
 export class Hero {
-  constructor(nom, alias, apparence, pouvoirs, personnalite, origine, stats, sorts) {
+  constructor(nom, alias, apparence, personnalite, origine, stats, sorts) {
     this.nom = nom;
     this.alias = alias;
     this.apparence = apparence;
-    this.pouvoirs = pouvoirs;
     this.personnalite = personnalite;
     this.origine = origine;
 
@@ -20,7 +19,7 @@ export class Hero {
     this.baseDefense = stats.defense;
 
     this.buffs = []; // liste des buffs et debuffs actifs avec durée
-    this.sorts = sorts.map(s => new Sort(s.nom, s.type, s.cooldown, s.description, s.value, s.effect, s.sideEffect, s.duration));
+    this.sorts = sorts.map(s => new Sort(s.nom, s.type, s.cooldown, s.description, s.value, s.effect, s.sideEffect, s.duration, s.altdesc));
   }
 
   presentation() {

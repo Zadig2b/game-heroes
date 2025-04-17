@@ -29,7 +29,6 @@ function testHeroInit(heroData, index) {
       heroData.nom,
       heroData.alias,
       heroData.apparence,
-      heroData.pouvoirs,
       heroData.personnalite,
       heroData.origine,
       heroData.stats,
@@ -51,7 +50,7 @@ function testHeroInit(heroData, index) {
 function testSortEffects(hero) {
   hero.sorts.forEach((sort) => {
     const sortName = sort.nom;
-    const target = new Hero("Target", "TestDummy", "", {}, {}, "", { agilite: 0, force: 0, defense: 0 }, []);
+    const target = new Hero("Target", "TestDummy", "", {}, "", { agilite: 0, force: 0, defense: 0 }, []);
     hero.pv = 100;
     target.pv = 100;
 
