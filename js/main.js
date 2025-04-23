@@ -31,7 +31,7 @@ fetch("./data/heroes.json")
       const alias = heroData.alias;
       const heroImgContainer = document.createElement("div");
       const heroImg = document.createElement("img");
-      heroImg.src = `assets/heroes/${alias}/${alias}.webp`;
+      heroImg.src = `assets/heroes/${alias.toLowerCase()}/${alias.toLowerCase()}.webp`;
       heroImg.alt = alias;
       heroImgContainer.classList.add("hero-card");
       heroImgContainer.appendChild(heroImg);
@@ -87,7 +87,7 @@ startGameButton.addEventListener("click", () => {
 
     // Affiche le portrait du héros choisi dans la zone correspondante
     const imgClone = document.createElement("img");
-    imgClone.src = `assets/heroes/${candidateHero.alias}/${candidateHero.alias}.webp`;
+    imgClone.src = `assets/heroes/${candidateHero.alias.toLowerCase()}/${candidateHero.alias.toLowerCase()}.webp`;
     imgClone.alt = candidateHero.alias;
     // imgClone.classList.add("selected-hero");
 

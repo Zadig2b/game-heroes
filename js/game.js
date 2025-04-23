@@ -45,13 +45,14 @@ if (!selectedHeroes || selectedHeroes.length < 2) {
 function afficherInfos(index) {
   const joueur = index === 0 ? joueur1 : joueur2;
   const zone = zones[index];
+  const alias = joueur.alias
   const wrapper = document.createElement("div");
   wrapper.innerHTML = `
     <h2>${joueur.alias} <span class="pv-bar" data-index="${index}" style="--pv: 100%;">
   <span class="pv-label">${joueur.pv}</span>
 </span>
 </h2>
-    <img src="assets/heroes/${joueur.alias}/${joueur.alias}.webp" alt="${joueur.alias}"  />
+    <img src="assets/heroes/${alias.toLowerCase()}/${alias.toLowerCase()}.webp" alt="${alias.toLowerCase()}"  />
 <div class="stat-container">
 
 <div class="stat-item">
