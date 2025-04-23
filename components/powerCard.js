@@ -7,7 +7,7 @@ export function renderPower(alias, nom, description) {
   label.textContent = nom;
 
   const img = document.createElement('img');
-  img.src = `assets/heroes/${alias}/power/${nom}.webp`;
+  img.src = `assets/heroes/${alias.toLowerCase()}/power/${nom.toLowerCase()}.webp`;
 
   const tooltip = document.createElement('span');
   tooltip.classList.add('tooltip');
